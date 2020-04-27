@@ -1,0 +1,15 @@
+button {
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.selected {
+  background-color: gray;
+}
+
+.task {
+  cursor: pointer;
+}
