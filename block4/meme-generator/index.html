@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meme Generator</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>MEME GENERATOR 2K20</h1>
+    </header>
+    <section class="main">
+    <label class="input-message">Enter the message:</label><br />
+    <input id="text-input" class="text-input" type="text" placeholder="Insert text here!" maxlength="60" /><br>
+    <input id="meme-insert" class="meme-insert" type="file" />
+    <div id="meme-image-container" class="meme-image-container">
+      <div id="meme-text" class="meme-text"></div>
+      <img id="meme-image" class="meme-image" alt="" />
+    </div>
+    <button id="button1" class="button1">
+      Dashed
+    </button>
+    <button id="button2" class="button2">
+      Double
+    </button>
+    <button id="button3" class="button3">
+      Groove
+    </button>
+  </section>
+  <aside>
+    <img src="imgs/meme1.jpeg" width="200" id="meme-1" class="meme" alt="Gandalf meme">
+    <img src="imgs/meme2.jpeg" width="200" id="meme-2" class="meme" alt="Fry futurama meme">
+    <img src="imgs/meme3.jpeg" width="200" id="meme-3" class="meme" alt="Thoughtful guy meme">
+    <img src="imgs/meme4.jpeg" width="200" id="meme-4" class="meme" alt="Baby yoda drinking meme">
+  </aside>
+  <footer>
+    <ul class="links">
+      <li>
+        <a href="https://www.github.com/matheusysd" target="_blank" >
+           <img src="imgs/github.svg" width="55" alt="Github icon">
+        </a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/in/matheusysd/" target="_blank" >
+            <img src="imgs/linkedin.svg" width="50" alt="linkedIn icon">
+        </a>
+    </li>
+    </ul>
+  </footer>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -1,0 +1,95 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  background-color: ivory;
+  font-family: Lato, sans-serif;
+  height: 100%;
+  text-align: center;
+}
+
+.button1 {
+  border: 3px dashed red;
+}
+
+.button2 {
+  border: 5px double blue;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.button3 {
+  border: 6px groove green;
+  margin-left: 15px;
+}
+
+footer {
+  background-color: indigo;
+  border-top: 10px black solid;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 80px;
+  position: absolute;
+  width: 100%;
+}
+
+h1 {
+  padding-top: 20px;
+}
+
+header {
+  background-color: indigo;
+  border-bottom: 10px black solid;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 80px;
+  margin-top: -21px;
+  text-align: center;
+  width: auto;
+}
+
+.links {
+  margin-top: 13px;
+}
+
+.links li {
+  display: inline;
+  margin-left: 30px;
+  position: relative;
+}
+
+.main {
+  margin-top: 10px;
+}
+
+.meme-image {
+  height: 100%;
+  width: 100%;
+}
+
+.meme-image-container {
+  background-color: rgb(255, 255, 255);
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  height: 481px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 640px;
+}
+
+.meme-insert {
+  margin-top: 10px;
+}
+
+.meme-text {
+  position: absolute;
+}
+
+.text-input {
+  margin-top: 10px;
+}
