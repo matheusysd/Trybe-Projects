@@ -1,0 +1,30 @@
+.color {
+  border: 1px solid black;
+  height: 41px;
+  width: 41px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px black solid;
+  height: 41px;
+  width: 41px;
+}
+
+.pixel-board {
+  border-collapse: collapse;
+}
+
+.selected {
+  border: 1px solid black;
+  height: 41px;
+  width: 41px;
+}
+
+body {
+  font-family: Lato, sans-serif;
+}
+
+table {
+  align-content: center;
+}
