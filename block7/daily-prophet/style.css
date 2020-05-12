@@ -1,7 +1,10 @@
+html {
+  cursor: url('imgs/magicWand1.png'), auto;
+}
+
 body {
   background: url('imgs/newspaperBackground.jpg');
   background-size: 100%;
-  cursor: url('imgs/magicWand1.png'), auto;
   font-family: 'Slabo 27px', serif;
   margin: 0 auto;
   max-width: 80%;
@@ -36,20 +39,6 @@ a {
   text-shadow: 2px 2px yellow;
 }
 
-.news {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.news-1 {
-  justify-content: center;
-}
-
-.section-2 {
-  display: flex;
-}
-
 footer {
   align-items: center;
   display: flex;
@@ -62,53 +51,8 @@ footer {
   justify-content: center;
 }
 
-.left {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.right {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .dayliLogo {
   width: 100%;
-}
-
-.line {
-  border-bottom: 2px solid black;
-  border-top: 5px solid black;
-  height: 1px;
-  width: 100%;
-}
-
-.voldemort1 {
-  border: 5px solid black;
-  border-radius: 10%;
-  float: left;
-  margin-right: 1em;
-  overflow: hidden;
-  transition: transform 2s;
-  width: 10em;
-}
-
-.lupin {
-  border: 5px solid black;
-  border-radius: 10%;
-  float: right;
-  margin-left: 1em;
-  overflow: hidden;
-}
-
-.voldemort {
-  border: 5px solid black;
-  border-radius: 10%;
-  float: right;
-  margin-left: 1em;
-  overflow: hidden;
 }
 
 .images {
@@ -118,15 +62,15 @@ footer {
 }
 
 @keyframes moving {
-
+  
   0% {
     transform: translateY(0) translateX(0);
   }
-
+  
   50% {
     transform: rotate(180deg);
   }
-
+  
   100% {
     transform: translateY(0) translateX(0);
   }
@@ -140,57 +84,124 @@ footer {
 }
 
 @keyframes flying {
-
+  
   from {
     transform: translateY(0) translateX(-300%);
   }
-
+  
   to {
     transform: translateY(100%) translateX(600%);
   }
 }
 
 @media screen and ( max-width : 760px ) {
-
+  
   .container-layout {
     background: yellow;
   }
-
+  
   .insignia {
     width: 0;
   }
 
+  .dayliLogo {
+    object-fit: contain;
+  }
+
+  .subtitle {
+    justify-content: center;
+    text-align: justify;
+  }
+  
   p {
     font-size: 1.2em;
   }
-
+  
   .section-2 {
     display: block;
   }
-
+  
   .lineM {
     border-bottom: 2px solid black;
     border-top: 5px solid black;
     height: 1px;
     width: 100%;
   }
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .voldemort1 {
+    border: 5px solid black;
+    border-radius: 10%;
+    float: left;
+    margin-right: 1em;
+    overflow: hidden;
+    transition: transform 2s;
+    width: 10em;
+  }
+  
+  .lupin {
+    border: 5px solid black;
+    border-radius: 10%;
+    float: right;
+    margin-left: 1em;
+    overflow: hidden;
+    width: 10em;
+  }
+  
+  .voldemort {
+    border: 5px solid black;
+    border-radius: 10%;
+    float: right;
+    margin-left: 1em;
+    overflow: hidden;
+    width: 10em;
+  }
 }
 
 @media screen and ( orientation : landscape ) {
-
+  
   .container-orientation {
     border: 1px solid red;
   }
 }
 
 @media screen and ( min-width : 761px ) {
-
+  
   .container-layout {
     background: red;
   }
-
+  
   .insignia {
     width: 15%;
+  }
+  
+  .line {
+    border-bottom: 2px solid black;
+    border-top: 5px solid black;
+    height: 1px;
+    width: 100%;
+  }
+
+  .news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.5em;
+  }
+
+  .news-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-1 {
+    display: flex;
+    justify-content: center;
+    align-self: auto;
+    flex-grow: 0;
   }
 }
 
@@ -201,6 +212,10 @@ footer {
 
 .footer:hover {
   transform: skew(-15deg);
+}
+
+.play {
+  animation-play-state: running;
 }
 
 .article-animation {
@@ -238,3 +253,4 @@ footer {
     opacity: 0;
   }
 }
+
