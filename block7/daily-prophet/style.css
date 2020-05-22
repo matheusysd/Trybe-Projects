@@ -105,7 +105,7 @@ footer {
   }
 
   .dayliLogo {
-    object-fit: fill;
+    object-fit: none;
   }
 
   .subtitle {
@@ -178,31 +178,52 @@ footer {
     width: 15%;
   }
   
-  .line {
-    border-bottom: 2px solid black;
-    border-top: 5px solid black;
-    height: 1px;
-    width: 100%;
+  .subtitle {
+    justify-content: center;
+    text-align: justify;
   }
-
+  
+  p {
+    font-size: 1.2em;
+  }
+  
+  .section-2 {
+    display: block;
+  }
+  
   .news {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 1.5em;
   }
-
-  .news-section {
-    display: flex;
-    justify-content: center;
+  .voldemort1 {
+    border: 5px solid black;
+    border-radius: 10%;
+    float: left;
+    margin-right: 1em;
+    overflow: hidden;
+    transition: transform 2s;
+    width: 10em;
   }
-
-  .section-1 {
-    display: flex;
-    justify-content: center;
-    align-self: auto;
-    flex-grow: 0;
+  
+  .lupin {
+    border: 5px solid black;
+    border-radius: 10%;
+    float: right;
+    margin-left: 1em;
+    overflow: hidden;
+    width: 10em;
   }
+  
+  .voldemort {
+    border: 5px solid black;
+    border-radius: 10%;
+    float: left;
+    margin-left: 1em;
+    overflow: hidden;
+    width: 10em;
+  }
+  
 }
 
 .footer {
@@ -221,6 +242,13 @@ footer {
 .article-animation {
   animation: article-grow 4s linear 2 alternate paused;
 }
+.line {
+  border-bottom: 2px solid black;
+  border-top: 5px solid black;
+  height: 1px;
+  width: 100%;
+}
+
 
 @keyframes article-grow {
 
