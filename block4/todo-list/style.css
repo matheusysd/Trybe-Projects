@@ -13,3 +13,90 @@ button {
 .task {
   cursor: pointer;
 }
+
+.selected {
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.list-item {
+  cursor: pointer;
+}
+
+button {
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 1%;
+  font-weight: bolder;
+}
+
+body {
+  height: 50vh;
+  background-color: black;
+  padding: 10%;
+}
+
+.container {
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 1% 2%;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: bolder;
+}
+
+#how-works {
+  font-size: 18px;
+  color: #333;
+}
+
+#add-task {
+  height: 42px;
+  border-radius: 15px;
+  border: none;
+  margin-left: 1%;
+  width: 9%;
+  font-weight: bolder;
+  background-color: royalblue;
+  color: white;
+}
+
+input {
+  width: 85%;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+
+li {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+#move-up {
+  background-color: royalblue;
+}
+#move-down {
+  background-color: royalblue;
+}
+#selected-remove {
+  background-color: rgb(172, 19, 19);
+}
+#done-remove {
+  background-color: rgb(172, 19, 19);
+}
+#clear-all {
+  background-color: rgb(172, 19, 19); 
+}
+#save-tasks {
+  background-color: green;
+}

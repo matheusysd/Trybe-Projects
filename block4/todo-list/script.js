@@ -1,16 +1,17 @@
-const taskList = document.getElementById('lista-tarefas');
-const btnAdd = document.getElementById('criar-tarefa');
-const btnClearAll = document.getElementById('apaga-tudo');
-const btnClearSelected = document.getElementById('remover-selecionado');
-const btnClearCompleted = document.getElementById('remover-finalizados');
-const input = document.getElementById('texto-tarefa');
-const btnMoveUp = document.getElementById('mover-cima');
-const btnMoveDown = document.getElementById('mover-baixo');
+const taskList = document.querySelector('#lista-tarefas');
+const btnAdd = document.querySelector('#criar-tarefa');
+const btnClearAll = document.querySelector('#apaga-tudo');
+const btnClearSelected = document.querySelector('#remover-selecionado');
+const btnClearCompleted = document.querySelector('#remover-finalizados');
+const input = document.querySelector('#texto-tarefa');
+const btnMoveUp = document.querySelector('#mover-cima');
+const btnMoveDown = document.querySelector('#mover-baixo');
 
-const btnSave = document.getElementById('salvar-tarefas');
-if (typeof Storage !== 'undefined') {
-  taskList.innerHTML = localStorage.taskList;
-}
+const btnSave = document.querySelector('salvar-tarefas');
+
+window.onload = function () {
+  list.innerHTML = localStorage.getItem('list');
+};
 
 const changeClass = (el, className) => {
   el.classList.contains(className) === false
