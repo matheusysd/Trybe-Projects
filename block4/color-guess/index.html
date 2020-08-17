@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <h1 id="title" class="title">Color guess</h1>
-  </header>
-  <div id="rgb-color" class="rgb-color">
-
-  </div>
-  <div id="balls" class="balls">
-
-  </div>
-  <div id="answer">
-    <p id="answer-text">Escolha uma cor</p>
-  </div>
-  <div id="score">
-    <p>Your score:</p>
-    <p id="score-text">0</p>
-  </div>
-  <button id="reset-game">
-    Reset
-  </button>
-  <button id="clear-score">
-    Clear score
-  </button>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Color Guess</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title" class="title">Color Guess</h1>
+    </header>
+    <div class="container">
+      <h3 id="rgb-color" class="rgb-color"></h3>
+      <div id="balls" class="balls"></div>
+      <div id="answer">
+        <h3 id="answer-text">Choose a color:</h3>
+      </div>
+      <div id="score">
+        <p>Your score:</p>
+        <p id="score-text">0</p>
+      </div>
+      <button id="reset-game">
+        Reset
+      </button>
+      <button id="clear-score">
+        Clear score
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,10 +1,39 @@
 .ball {
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 80px;
+  width: 80px;
   display: inline-block;
+}
+
+.balls {
+  display: flex;
+  justify-content: center;
 }
 
 body {
   text-align: center;
+  background-color: teal;
+}
+
+button {
+  border: none;
+  border-radius: 15px;
+  padding: 1%;
+  background-color: #333;
+  font-weight: bolder;
+  color: white;
+}
+
+#clear-score {
+  background-color: rgb(201, 12, 12);
+}
+
+#reset-game {
+  background-color: seagreen;
+}
+
+.container {
+  border-radius: 15px;
+  background-color: slategrey;
+  padding: 1% 2%;
 }
