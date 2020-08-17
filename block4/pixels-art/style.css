@@ -23,8 +23,29 @@
 
 body {
   font-family: Lato, sans-serif;
+  height: 50vh;
+  background-color: gray;
 }
 
-table {
-  align-content: center;
+button {
+  border: none;
+  border-radius: 15px;
+  padding: 1%;
+  font-weight: bolder;
 }
+
+#clear-board {
+  background-color: rgb(218, 11, 11);
+}
+
+#generate-board {
+  background-color: green;
+}
+
+input {
+  width: 15vh;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 1%;
+}
+
