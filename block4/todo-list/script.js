@@ -10,7 +10,7 @@ const btnMoveDown = document.querySelector('#move-down');
 const btnSave = document.querySelector('#save-tasks');
 
 window.onload = function () {
-  list.innerHTML = localStorage.getItem('list');
+  taskList.innerHTML = localStorage.getItem('taskList');
 };
 
 const changeClass = (el, className) => {
