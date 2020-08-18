@@ -103,10 +103,23 @@ li {
   body {
     background-color: black;
   }
-  button{
-    width: 12vh;
+  button {
+    width: 80px;
+    height: 30px;
+  }
+  input {
+    width: 60%;
   }
   .container {
-    height: 55vh;
+    height: 70vh;
+  }
+  #add-task {
+    height: 30px;
+    width: 80px;
+  }
+  ol {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
