@@ -78,6 +78,11 @@ input {
 li {
   font-weight: bold;
   font-size: 18px;
+  color: rgb(77, 75, 75);
+}
+
+span {
+  color: black;
 }
 
 #move-up {
@@ -109,9 +114,6 @@ li {
   }
   input {
     width: 50%;
-  }
-  .container {
-    height: 70vh;
   }
   #add-task {
     height: 30px;

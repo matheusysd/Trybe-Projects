@@ -19,14 +19,16 @@ const changeClass = (el, className) => {
 };
 
 const addTask = () => {
-  const newEl = document.createElement('li');
-  newEl.classList.add('task');
+  const newLi = document.createElement('li');
+  const newSpan = document.createElement('span');
+  newLi.appendChild(newSpan);
+  newLi.classList.add('task');
 
   if (input.value === '') {
     alert('Please insert some text');
   } else {
-    newEl.innerText = input.value;
-    taskList.appendChild(newEl);
+    newSpan.innerText = input.value;
+    taskList.appendChild(newLi);
     input.value = '';
   }
   input.focus();
