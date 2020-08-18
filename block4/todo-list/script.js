@@ -15,7 +15,8 @@ window.onload = function () {
 
 const changeClass = (el, className) => {
   el.classList.contains(className) === false
-  ? el.classList.add(className) : el.classList.remove(className);
+    ? el.classList.add(className)
+    : el.classList.remove(className);
 };
 
 const addTask = () => {
@@ -45,6 +46,9 @@ const clearAll = () => {
 };
 
 const specificRemove = (type) => {
+  const classes = document.querySelectorAll(type);
+  console.log(classes);
+  if (classes.length < 1) return alert('Select a class to remove it');
   const items = document.querySelectorAll('span');
   for (let i = 0; i < items.length; i += 1) {
     if (items[i].classList.contains(type) === true) items[i].parentElement.remove();
@@ -73,28 +77,32 @@ btnSave.addEventListener('click', function () {
 
 btnMoveUp.addEventListener('click', function () {
   const selecionado = document.querySelector('.selected');
-  if (selecionado == null) alert('Select a task!');
-  if (taskList.children[0] === selecionado) {
+  const checkSelecionado = document.querySelectorAll('.selected');
+  if (checkSelecionado.length > 1) return alert('Only one task should be moved!');
+  if (selecionado == null) return alert('Select a task to be moved!');
+  if (taskList.children[0] === selecionado.parentElement) {
     alert('Limite alcançado');
   } else {
-    const valorAcima = selecionado.previousElementSibling.innerHTML;
-    const valorQSobe = selecionado.innerHTML;
-    selecionado.previousElementSibling.innerHTML = valorQSobe;
-    selecionado.innerHTML = valorAcima;
+    const valorAcima = selecionado.parentElement.previousElementSibling.innerHTML;
+    const valorQSobe = selecionado.parentElement.innerHTML;
+    selecionado.parentElement.previousElementSibling.innerHTML = valorQSobe;
+    selecionado.parentElement.innerHTML = valorAcima;
     selecionado.classList.remove('selected');
   }
 });
 
 btnMoveDown.addEventListener('click', function () {
   const selecionado = document.querySelector('.selected');
-  if (selecionado == null) alert('Select a task!');
-  if (taskList.children[taskList.children.length - 1] === selecionado) {
+  const checkSelecionado = document.querySelectorAll('.selected');
+  if (checkSelecionado.length > 1) return alert('Only one task should be moved!');
+  if (selecionado == null) return alert('Select a task to be moved!');
+  if (taskList.children[taskList.children.length - 1] === selecionado.parentElement) {
     alert('Limite alcançado');
   } else {
-    const valorAbaixo = selecionado.nextElementSibling.innerHTML;
-    const valorQDesce = selecionado.innerHTML;
-    selecionado.nextElementSibling.innerHTML = valorQDesce;
-    selecionado.innerHTML = valorAbaixo;
+    const valorAbaixo = selecionado.parentElement.nextElementSibling.innerHTML;
+    const valorQDesce = selecionado.parentElement.innerHTML;
+    selecionado.parentElement.nextElementSibling.innerHTML = valorQDesce;
+    selecionado.parentElement.innerHTML = valorAbaixo;
     selecionado.classList.remove('selected');
   }
 });
