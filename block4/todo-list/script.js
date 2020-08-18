@@ -1,13 +1,13 @@
-const taskList = document.querySelector('#lista-tarefas');
-const btnAdd = document.querySelector('#criar-tarefa');
-const btnClearAll = document.querySelector('#apaga-tudo');
-const btnClearSelected = document.querySelector('#remover-selecionado');
-const btnClearCompleted = document.querySelector('#remover-finalizados');
-const input = document.querySelector('#texto-tarefa');
-const btnMoveUp = document.querySelector('#mover-cima');
-const btnMoveDown = document.querySelector('#mover-baixo');
+const taskList = document.querySelector('#todo-list');
+const btnAdd = document.querySelector('#add-task');
+const btnClearAll = document.querySelector('#clear-all');
+const btnClearSelected = document.querySelector('#selected-remove');
+const btnClearCompleted = document.querySelector('#done-remove');
+const input = document.querySelector('#task-text');
+const btnMoveUp = document.querySelector('#move-up');
+const btnMoveDown = document.querySelector('#move-down');
 
-const btnSave = document.querySelector('salvar-tarefas');
+const btnSave = document.querySelector('#save-tasks');
 
 window.onload = function () {
   list.innerHTML = localStorage.getItem('list');
