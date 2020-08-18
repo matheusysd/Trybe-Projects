@@ -48,7 +48,7 @@ const clearAll = () => {
 const specificRemove = (type) => {
   const classes = document.querySelectorAll(type);
   console.log(classes);
-  if (classes.length < 1) return alert('Select a class to remove it');
+  if (classes.length < 0) return alert('Select a class to remove it');
   const items = document.querySelectorAll('span');
   for (let i = 0; i < items.length; i += 1) {
     if (items[i].classList.contains(type) === true) items[i].parentElement.remove();
