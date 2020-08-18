@@ -104,11 +104,11 @@ li {
     background-color: black;
   }
   button {
-    width: 80px;
-    height: 30px;
+    width: 15vh;
+    height: 7vh;
   }
   input {
-    width: 60%;
+    width: 50%;
   }
   .container {
     height: 70vh;
@@ -117,9 +117,9 @@ li {
     height: 30px;
     width: 80px;
   }
-  ol {
+  .buttons{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
