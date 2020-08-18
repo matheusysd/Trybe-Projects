@@ -35,16 +35,19 @@ const addTask = () => {
   input.focus();
 };
 taskList.addEventListener('click', function (elemento) {
-  console.log(elemento.target.tagName);
-  if (elemento.target.tagName !== 'SPAN') {
-    return alert('Select the text!');
+  if (elemento.target.tagName === 'LI') {
+    changeClass(elemento.target.children[0], 'selected');
+  } else if (elemento.target.tagName === 'OL') {
+    return null;
   } else {
     changeClass(elemento.target, 'selected');
   }
 });
 taskList.addEventListener('dblclick', function (elemento) {
-  if (elemento.target.tagName !== 'SPAN') {
-    return alert('Select the text!');
+  if (elemento.target.tagName === 'LI') {
+    changeClass(elemento.target.children[0], 'completed');
+  } else if (elemento.target.tagName === 'OL') {
+    return null;
   } else {
     changeClass(elemento.target, 'completed');
   }
@@ -56,7 +59,6 @@ const clearAll = () => {
 
 const specificRemove = (type) => {
   const classes = document.querySelectorAll(type);
-  console.log(classes);
   if (classes.length < 0) return alert('Select a class to remove it');
   const items = document.querySelectorAll('span');
   for (let i = 0; i < items.length; i += 1) {
