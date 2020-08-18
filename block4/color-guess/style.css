@@ -1,18 +1,22 @@
 .ball {
+  border: black 0.01vh solid;
   border-radius: 50%;
-  height: 80px;
-  width: 80px;
+  height: 10vh;
+  width: 10vh;
   display: inline-block;
 }
 
 .balls {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 body {
+  background-image: url('./palm-field-5404428_1920.jpg');
+  height: 50vh;
   text-align: center;
-  background-color: teal;
+  padding: 10%;
+  font-family: 'Comfortaa', cursive;
 }
 
 button {
@@ -34,6 +38,18 @@ button {
 
 .container {
   border-radius: 15px;
-  background-color: slategrey;
+  background-color: rgba(255, 255, 255, 0.603);
   padding: 1% 2%;
 }
+
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 0%;
+  }
+
+  button {
+    width: 15vh;
+    height: 7vh;
+  }
+}
+

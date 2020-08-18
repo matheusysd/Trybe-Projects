@@ -48,13 +48,13 @@ getRandomRgb = () => {
 }
 
 correctAnswer = () => {
-  textAnswer.innerHTML = "Acertou!";
+  textAnswer.innerHTML = "Correct!";
   scoreText.innerHTML = parseInt(scoreText.innerHTML, 10) + 3;
   cicle();
 }
 
 wrongAnswer = () => {
-  textAnswer.innerHTML = "Errou! Tente novamente!";
+  textAnswer.innerHTML = "Wrong! Try again!";
 
 }
 
