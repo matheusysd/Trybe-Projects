@@ -75,12 +75,10 @@ input {
   padding: 1%;
 }
 
-
 li {
   font-weight: bold;
   font-size: 18px;
 }
-
 
 #move-up {
   background-color: royalblue;
@@ -95,8 +93,20 @@ li {
   background-color: rgb(172, 19, 19);
 }
 #clear-all {
-  background-color: rgb(172, 19, 19); 
+  background-color: rgb(172, 19, 19);
 }
 #save-tasks {
   background-color: green;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-color: black;
+  }
+  button{
+    width: 12vh;
+  }
+  .container {
+    height: 55vh;
+  }
 }
