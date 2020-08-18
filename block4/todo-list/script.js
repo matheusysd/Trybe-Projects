@@ -35,10 +35,19 @@ const addTask = () => {
   input.focus();
 };
 taskList.addEventListener('click', function (elemento) {
-  changeClass(elemento.target, 'selected');
+  console.log(elemento.target.tagName);
+  if (elemento.target.tagName !== 'SPAN') {
+    return alert('Select the text!');
+  } else {
+    changeClass(elemento.target, 'selected');
+  }
 });
 taskList.addEventListener('dblclick', function (elemento) {
-  changeClass(elemento.target, 'completed');
+  if (elemento.target.tagName !== 'SPAN') {
+    return alert('Select the text!');
+  } else {
+    changeClass(elemento.target, 'completed');
+  }
 });
 
 const clearAll = () => {
