@@ -37,9 +37,9 @@ button {
 
 body {
   height: 50vh;
-  /* background-color: black; */
   background-image: url('./pine-5425201_1920.jpg');
   padding: 10%;
+  font-family: 'Comfortaa', cursive;
 }
 
 .container {
@@ -51,6 +51,7 @@ body {
 h1 {
   font-size: 42px;
   font-weight: bolder;
+  text-align: center;
 }
 
 #how-works {
