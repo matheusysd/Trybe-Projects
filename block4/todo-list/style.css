@@ -37,7 +37,8 @@ button {
 
 body {
   height: 50vh;
-  background-color: black;
+  /* background-color: black; */
+  background-image: url('./pine-5425201_1920.jpg');
   padding: 10%;
 }
 

@@ -45,9 +45,9 @@ const clearAll = () => {
 };
 
 const specificRemove = (type) => {
-  const items = document.querySelectorAll('li');
+  const items = document.querySelectorAll('span');
   for (let i = 0; i < items.length; i += 1) {
-    if (items[i].classList.contains(type) === true) items[i].remove();
+    if (items[i].classList.contains(type) === true) items[i].parentElement.remove();
   }
 };
 
