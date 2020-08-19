@@ -35,6 +35,10 @@ button {
   font-weight: bolder;
 }
 
+input:focus {
+  outline: none;
+}
+
 body {
   height: 50vh;
   background-image: url('./pine-5425201_1920.jpg');
@@ -75,6 +79,10 @@ input {
   border: 1px solid #333;
   border-radius: 15px;
   padding: 1%;
+}
+
+button:focus {
+  outline: none;
 }
 
 li {
@@ -122,7 +130,7 @@ span {
     height: 30px;
     width: 80px;
   }
-  .buttons{
+  .buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
