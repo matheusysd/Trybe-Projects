@@ -11,6 +11,11 @@
   width: 41px;
 }
 
+#selectedColor {
+  height: 41px;
+  width: 41px;
+}
+
 .pixel-board {
   border-collapse: collapse;
 }
@@ -29,14 +34,13 @@ body {
   background-image: url('./rain-water-5470471_1920.jpg');
 }
 
-input:focus {
+.board-size:focus {
   outline: none;
 }
 
 button:focus {
   outline: none;
 }
-
 
 button {
   border: none;
@@ -53,7 +57,7 @@ button {
   background-color: green;
 }
 
-input {
+.board-size {
   width: 15vh;
   border: 1px solid #333;
   border-radius: 15px;

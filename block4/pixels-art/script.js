@@ -8,6 +8,8 @@ function randomColor() {
   return color;
 }
 
+const selectedColor = document.getElementById('selectedColor');
+
 const blackPixel = document.getElementById('black');
 blackPixel.style.backgroundColor = 'black';
 
@@ -40,13 +42,21 @@ thirdColor.addEventListener('click', function () {
   thirdColor.classList.add('selected');
 });
 
+selectedColor.addEventListener('click', function () {
+  document.querySelector('.selected').classList.remove('selected');
+  selectedColor.classList.add('selected');
+});
+
 function paintPixel() {
   const pixelSelected = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelSelected.length; index += 1) {
     pixelSelected[index].addEventListener('click', function () {
       const selectedColor = document.querySelector('.selected');
-      pixelSelected[index].style.backgroundColor =
-        selectedColor.style.backgroundColor;
+      if (selectedColor.tagName === 'TD') {
+        pixelSelected[index].style.backgroundColor = selectedColor.style.backgroundColor;
+      } else {
+        pixelSelected[index].style.backgroundColor = selectedColor.value;
+      }
     });
   }
 }
@@ -85,9 +95,12 @@ function createTable() {
 
 generateButton.addEventListener('click', () => {
   if (inputSize.value < 5 || inputSize.value > 50 || inputSize.value == null) {
-    if (inputSize.value < 5) inputSize.value = 5; createTable();
-    if (inputSize.value > 50) inputSize.value = 50; createTable();
-    if (inputSize.value == null) inputSize.value = 5; createTable();
+    if (inputSize.value < 5) inputSize.value = 5;
+    createTable();
+    if (inputSize.value > 50) inputSize.value = 50;
+    createTable();
+    if (inputSize.value == null) inputSize.value = 5;
+    createTable();
   } else {
     createTable();
   }
