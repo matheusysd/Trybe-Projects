@@ -22,10 +22,21 @@
 }
 
 body {
-  font-family: Lato, sans-serif;
   height: 50vh;
-  background-color: gray;
+  text-align: center;
+  padding: 10%;
+  font-family: 'Comfortaa', cursive;
+  background-image: url('./rain-water-5470471_1920.jpg');
 }
+
+input:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
 
 button {
   border: none;
@@ -49,3 +60,25 @@ input {
   padding: 1%;
 }
 
+.container {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.603);
+  padding: 1% 2%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 0%;
+  }
+
+  button {
+    width: 15vh;
+    height: 7vh;
+  }
+}
