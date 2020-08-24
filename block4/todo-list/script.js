@@ -21,32 +21,30 @@ const changeClass = (el, className) => {
 
 const addTask = () => {
   const newLi = document.createElement('li');
-  const newSpan = document.createElement('span');
-  newLi.appendChild(newSpan);
   newLi.classList.add('task');
 
   if (input.value === '') {
     alert('Please insert some text');
   } else {
-    newSpan.innerText = input.value;
+    newLi.innerText = input.value;
     taskList.appendChild(newLi);
     input.value = '';
   }
   input.focus();
 };
 taskList.addEventListener('click', function (elemento) {
-  if (elemento.target.tagName === 'LI') {
-    changeClass(elemento.target.children[0], 'selected');
-  } else if (elemento.target.tagName === 'OL') {
+  if (elemento.target.tagName === 'UL') {
+    //   changeClass(elemento.target.children[0], 'selected');
+    // } else if (elemento.target.tagName === 'UL') {
     return null;
   } else {
     changeClass(elemento.target, 'selected');
   }
 });
 taskList.addEventListener('dblclick', function (elemento) {
-  if (elemento.target.tagName === 'LI') {
-    changeClass(elemento.target.children[0], 'completed');
-  } else if (elemento.target.tagName === 'OL') {
+  if (elemento.target.tagName === 'UL') {
+    //   changeClass(elemento.target.children[0], 'completed');
+    // } else if (elemento.target.tagName === 'UL') {
     return null;
   } else {
     changeClass(elemento.target, 'completed');
@@ -91,14 +89,18 @@ btnMoveUp.addEventListener('click', function () {
   const checkSelecionado = document.querySelectorAll('.selected');
   if (checkSelecionado.length > 1) return alert('Only one task should be moved!');
   if (selecionado == null) return alert('Select a task to be moved!');
-  if (taskList.children[0] === selecionado.parentElement) {
+  if (taskList.children[0] === selecionado) {
     alert('Limite alcançado');
   } else {
-    const valorAcima = selecionado.parentElement.previousElementSibling.innerHTML;
-    const valorQSobe = selecionado.parentElement.innerHTML;
-    selecionado.parentElement.previousElementSibling.innerHTML = valorQSobe;
-    selecionado.parentElement.innerHTML = valorAcima;
+    const valorAcima = selecionado.previousElementSibling.innerHTML;
+    const valorQSobe = selecionado.innerHTML;
+    selecionado.previousElementSibling.innerHTML = valorQSobe;
+    selecionado.innerHTML = valorAcima;
     selecionado.classList.remove('selected');
+    if (selecionado.classList.contains('completed')) {
+      selecionado.previousElementSibling.classList.add('completed');
+      selecionado.classList.remove('completed');
+    }
   }
 });
 
@@ -107,13 +109,17 @@ btnMoveDown.addEventListener('click', function () {
   const checkSelecionado = document.querySelectorAll('.selected');
   if (checkSelecionado.length > 1) return alert('Only one task should be moved!');
   if (selecionado == null) return alert('Select a task to be moved!');
-  if (taskList.children[taskList.children.length - 1] === selecionado.parentElement) {
+  if (taskList.children[taskList.children.length - 1] === selecionado) {
     alert('Limite alcançado');
   } else {
-    const valorAbaixo = selecionado.parentElement.nextElementSibling.innerHTML;
-    const valorQDesce = selecionado.parentElement.innerHTML;
-    selecionado.parentElement.nextElementSibling.innerHTML = valorQDesce;
-    selecionado.parentElement.innerHTML = valorAbaixo;
+    const valorAbaixo = selecionado.nextElementSibling.innerHTML;
+    const valorQDesce = selecionado.innerHTML;
+    selecionado.nextElementSibling.innerHTML = valorQDesce;
+    selecionado.innerHTML = valorAbaixo;
     selecionado.classList.remove('selected');
+    if (selecionado.classList.contains('completed')) {
+      selecionado.nextElementSibling.classList.add('completed');
+      selecionado.classList.remove('completed');
+    }
   }
 });
